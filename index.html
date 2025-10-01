@@ -57,7 +57,7 @@
     <h2>Benvingut a Activa Teià</h2>
     <img src="https://via.placeholder.com/600x300?text=Activa+Teià+Resum" alt="Resum de Activa Teià" style="width:100%; border-radius:12px; margin:1rem 0;">
     <p>Activa Teià et permet descobrir els negocis, esdeveniments i activitats que es fan prop teu. Podràs veure horaris, preus i accedir al mapa interactiu per trobar-los fàcilment.</p>
-    <p>Connecta amb restaurants, centres culturals i biblioteques, i mantingues-te al corrent de tot el que passa a la teva ciutat o localitat.</p>
+    <p>Connecta amb restaurants, centres culturals i biblioteques, i mantingues-te al corrent de tot el que passa a Teià.</p>
     <p>A més, Activa Teià ofereix recomanacions personalitzades segons els teus interessos i et permet planificar el teu dia descobrint activitats i llocs de manera ràpida i senzilla.</p>
     <p>Pots veure detalls de cada negoci, els seus horaris d'obertura, activitats programades, preus i ubicació exacta al nostre mapa interactiu. Explora la teva ciutat com mai abans!</p>
 </section>
@@ -69,39 +69,19 @@
         <select id="categoria">
             <option value="all">Tots</option>
             <option value="restaurante">Restaurants</option>
-            <option value="cultural">Cultural</option>
-            <option value="biblioteca">Biblioteca</option>
+            <option value="casal">Casals</option>
+            <option value="biblioteca">Biblioteques</option>
         </select>
     </div>
     <div class="cards" id="cards-container">
-        <div class="card" data-category="restaurante">
-            <img src="https://via.placeholder.com/300x200" alt="Restaurant">
-            <h3>Restaurant El Racó</h3>
-            <p>Gaudeix de cuina local.</p>
-            <ul>
-                <li>Activitat: Sopar temàtic els divendres</li>
-                <li>Horari: 20:00 - 23:00</li>
-                <li>Preu: 25€ per persona</li>
-            </ul>
-        </div>
         <div class="card" data-category="cultural">
             <img src="https://via.placeholder.com/300x200" alt="Casal">
-            <h3>Casal Cultural</h3>
-            <p>Tallers de pintura, música i activitats per a totes les edats.</p>
+            <h3>Casal de Joves</h3>
+            <p>Tallers, sortides, torneigs i molt més a partir de 1r de la ESO.</p>
             <ul>
-                <li>Activitat: Taller de pintura</li>
-                <li>Horari: 17:00 - 19:00</li>
-                <li>Preu: 10€</li>
-            </ul>
-        </div>
-        <div class="card" data-category="biblioteca">
-            <img src="https://via.placeholder.com/300x200" alt="Biblioteca">
-            <h3>Biblioteca Central</h3>
-            <p>Presentacions i clubs de lectura.</p>
-            <ul>
-                <li>Activitat: Club de lectura infantil</li>
-                <li>Horari: 16:00 - 17:00</li>
-                <li>Preu: Gratis</li>
+                <li>Activitat: 27/9/25 Disco jove amb còctels sense alcohol</li>
+                <li>Horari: 22:00-24:00</li>
+                <li>Preu: gratis</li>
             </ul>
         </div>
     </div>
@@ -132,20 +112,20 @@
     });
 
     // Mapa Leaflet
-    var map = L.map('map').setView([40.4168, -3.7038], 13);
+    // Coordenades de Teià (Barcelona)
+    var map = L.map('map').setView([41.5006, 2.3167], 15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    var negocios = [
-        {name: "Restaurant El Racó", coords: [40.418, -3.703]},
-        {name: "Casal Cultural", coords: [40.417, -3.705]},
-        {name: "Biblioteca Central", coords: [40.416, -3.702]}
-    ];
-    negocios.forEach(function(negocio){
-        L.marker(negocio.coords).addTo(map).bindPopup(`<b>${negocio.name}</b>`);
-    });
+    // Si vols afegir punts d'interès a Teià, pots posar-los aquí:
+    // var punts = [
+    //     {name: "Casal de Joves", coords: [41.5010, 2.3170]}
+    // ];
+    // punts.forEach(function(punt){
+    //     L.marker(punt.coords).addTo(map).bindPopup(`<b>${punt.name}</b>`);
+    // });
 
     // Filtre de categories
     const select = document.getElementById('categoria');
