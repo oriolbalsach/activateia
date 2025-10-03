@@ -48,17 +48,16 @@
 </header>
 
 <nav>
-    <button class="tab-btn active" data-tab="inicio">Introducció</button>
+    <button class="tab-btn" data-tab="inicio">Introducció</button>
     <button class="tab-btn" data-tab="negocios">Llocs i Activitats</button>
-    <button class="tab-btn" data-tab="mapa">Mapa</button>
+    <button class="tab-btn active" data-tab="mapa">Mapa</button>
 </nav>
 
-<section id="inicio" class="section active">
+<section id="inicio" class="section">
     <h2>Benvingut a Activa Teià</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Tei%C3%A0_-_Vista_general.JPG" alt="Vista general de Teià" style="width:100%; max-width:600px; border-radius:12px; margin:1rem 0;">
+    <img src="images/Teia.jpg" alt="Vista general de Teià" style="width:100%; max-width:600px; border-radius:12px; margin:1rem 0;">
     <p>Activa Teià et permet descobrir els negocis, esdeveniments i activitats que es fan prop teu. Podràs veure horaris, preus i accedir al mapa interactiu per trobar-los fàcilment.</p>
     <p>Connecta amb restaurants, centres culturals i biblioteques, i mantingues-te al corrent de tot el que passa a Teià.</p>
-    <p>A més, Activa Teià ofereix recomanacions personalitzades segons els teus interessos i et permet planificar el teu dia descobrint activitats i llocs de manera ràpida i senzilla.</p>
     <p>Pots veure detalls de cada negoci, els seus horaris d'obertura, activitats programades, preus i ubicació exacta al nostre mapa interactiu. Explora la teva ciutat com mai abans!</p>
 </section>
 
@@ -75,19 +74,19 @@
     </div>
     <div class="cards" id="cards-container">
         <div class="card" data-category="cultural">
-            <img src="https://via.placeholder.com/300x200" alt="Casal">
+            <img src="images/casal.png" alt="Casal">
             <h3>Casal de Joves</h3>
-            <p>Tallers, sortides, torneigs i molt més a partir de 1r de la ESO.</p>
+            <p>Tallers, sortides, torneigs, discos joves i molt més.</p>
             <ul>
-                <li>Activitat: 27/9/25 Disco jove amb còctels sense alcohol</li>
-                <li>Horari: 22:00-24:00</li>
+                <li>Activitat: 3/10/25 Disco jove amb còctels sense alcohol</li>
+                <li>Horari: 22:00-00:30</li>
                 <li>Preu: gratis</li>
             </ul>
         </div>
     </div>
 </section>
 
-<section id="mapa" class="section">
+<section id="mapa" class="section active">
     <h2>Mapa Interactiu</h2>
     <div id="map"></div>
 </section>
@@ -140,4 +139,3 @@
 
 </body>
 </html>
-
